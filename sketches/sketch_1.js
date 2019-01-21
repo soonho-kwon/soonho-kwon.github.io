@@ -50,11 +50,15 @@ function setup() {
 function draw() {
   background(255);
   for (var i = 0; i < letters.length; i++){
+    fill(0, 0, 0, letters[i][3]);
     text(letters[i][0], letters[i][1], letters[i][2]);
     letters[i][2] -= 3;
+    letters[i][3] = map(letters[i][2], height, 20, 255, 0);
   }
 }
 
 function keyReleased() {
-  letters.push([key,startX[key],y]);
+  if (key in startX){
+    letters.push([key, startX[key], y, 255]);
+  }
 }
