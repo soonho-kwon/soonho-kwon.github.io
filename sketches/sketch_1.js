@@ -1,4 +1,6 @@
-var startX = {
+//made by soonho kwon for esther jeon
+
+let startX = {
   1:144,
   2:232,
   3:320,
@@ -15,7 +17,7 @@ var startX = {
   "d":378,
   "e":363,
   "f":457,
-  "g":451,
+  "g":561,
   "h":634,
   "i":782,
   "j":716,
@@ -38,23 +40,34 @@ var startX = {
 };
 
 let letters = [];
+let x, y, y2, a;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   x = width / 2;
   y = height;
+  y2 = height - 80;
+  a = 255;
   textSize(15);
   // textFont('Courier New');
 }
 
 function draw() {
   background(255);
+
+  fill(0, 0, 0, a);
+  text('type something!', x-80, y2);
+  y2 -= 2.5;
+  a = map(y, height, 20, 255, 0);
+
   for (var i = 0; i < letters.length; i++){
     fill(0, 0, 0, letters[i][3]);
     text(letters[i][0], letters[i][1], letters[i][2]);
+    // letters[i][2] -= random(1, 6);
     letters[i][2] -= 3;
     letters[i][3] = map(letters[i][2], height, 20, 255, 0);
   }
+  // print(mouseX);
 }
 
 function keyReleased() {
