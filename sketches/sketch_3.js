@@ -69,7 +69,8 @@ var lettersRaw = [
 ['Inside a place', 272],
 ['You thought was dignified', 273],
 ['I don\'t wanna live like this', 276],
-['But I don\'t wanna die', 278]
+['But I don\'t wanna die', 278],
+['congrats on finishing ;)', 300]
 ];
 
 var playing = false;
