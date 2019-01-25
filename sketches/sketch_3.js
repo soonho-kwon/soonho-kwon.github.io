@@ -103,9 +103,6 @@ function draw() {
     t = song.currentTime();
   }
 
-  print(t);
-  // print(lettersRaw[lyricIndex][1]);
-
   if (t > lettersRaw[lyricIndex][1] && song.isPlaying()){
     song.pause();
     print('boo');
@@ -167,15 +164,5 @@ function initializeString(index){
     letters[i] = [letters[i], startingX, [0, 0, 0]];
     startingX = startingX + tWidth;
     lineWidth += tWidth;
-  }
-}
-
-function mousePressed() {
-  if ( song.isPlaying() ) { // .isPlaying() returns a boolean
-    song.pause();
-    background(255,0,0);
-  } else {
-    song.play();
-    background(0,255,0);
   }
 }
