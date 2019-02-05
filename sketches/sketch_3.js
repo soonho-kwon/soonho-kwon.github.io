@@ -106,11 +106,11 @@ function draw() {
 
   if (t > lettersRaw[lyricIndex][1] && song.isPlaying()){
     song.pause();
-    print('boo');
+    // print('boo');
   }
   else if (t < lettersRaw[lyricIndex][1] && song.isPaused()){
     song.play();
-    print('yoo');
+    // print('yoo');
   }
 
   background(255);
