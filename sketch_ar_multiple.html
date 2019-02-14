@@ -22,9 +22,10 @@
     <div>
       <img src="assets/Projection_UI.png" alt=“health_system“>
     </div>
-    <a-scene embedded arjs='debugUIEnabled: false;'>
+    <a-scene embedded arjs='debugUIEnabled: false;' vr-mode-ui="enabled: false">
   		<a-marker type="pattern" preset="custom" url="assets/patts/marker 1.patt">
   			<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+
   		</a-marker>
 
   		<a-marker type="pattern" preset="custom" url="assets/patts/marker 2.patt">
@@ -40,7 +41,8 @@
   		</a-marker>
 
   		<a-marker preset="hiro">
-  			<a-box position='0 0.5 0' material='opacity: 0.5; color: blue;'></a-box>
+  			<!-- <a-box position='0 0.5 0' material='opacity: 0.5; color: blue;'></a-box> -->
+        <a-image rotation="-90 180 0" width="1.59" height="1" position="0 1 0.5" src="assets/Dyson.png"></a-image>
   		</a-marker>
 
   		<a-entity camera></a-entity>
