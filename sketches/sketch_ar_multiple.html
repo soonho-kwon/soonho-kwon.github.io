@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+  </head>
+
+  <style>
+  /* img{
+      width:20%;
+  } */
+  </style>
+  <body>
+    <!-- <img src="assets/Projection_UI.png" alt=“health_system“ style=“position: fixed; top: 100px; left: 50px; right: 50px; z-index: 1;”> -->
+
+    <a-scene embedded arjs='debugUIEnabled: false;'>
+		<a-marker type="pattern" preset="custom" url="../assets/patts/marker 1.patt">
+			<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+		</a-marker>
+
+		<a-marker type="pattern" preset="custom" url="../assets/patts/marker 2.patt">
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: red;'></a-box>
+		</a-marker>
+
+		<a-marker type="pattern" preset="custom" url="../assets/patts/marker 3.patt">
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: yellow;'></a-box>
+		</a-marker>
+
+		<a-marker type="pattern" preset="custom" url="../assets/patts/marker 4.patt">
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: green;'></a-box>
+		</a-marker>
+
+		<a-marker preset="hiro">
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: blue;'></a-box>
+		</a-marker>
+
+		<a-entity camera></a-entity>
+	</a-scene>
+  </body>
+</html>
