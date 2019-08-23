@@ -28,7 +28,7 @@ var letters =
   "Z":[[5,3],[[[0,0],[0,3],[2,3],[2,2],[3,2],[3,1],[4,1],[4,3],[5,3],[5,0],[3,0],[3,1],[2,1],[2,2],[1,2],[1,0]],[1,2,3,4,7,8,13,14]]]
 };
 var elong = 0;
-var stretchFactor = 0.5;
+var stretchFactor = 1.5;
 
 var letterW, letterH;
 var currentLetter;
@@ -39,8 +39,8 @@ var startX, startY;
 var letterColor = 0;
 var backgroundColor = 255;
 
-var sizeMult = 20;
-var spaceVal = 20;
+var sizeMult = 10;
+var spaceVal = 10;
 
 var active;
 var stopFlag;
@@ -62,56 +62,48 @@ function draw() {
   if (active){
     if (keyIsPressed && keyCode > 96 && keyCode < 123) {
 
-    var let = key.toUpperCase();
-    console.log(key);
-    if (let == currentLetter || currentLetter == ""){currentLetter = let;}
-    else {
-      currentLetter = let;
-      newLetter();
-      console.log('new letter from multiple!');
-    }
+      var let = key.toUpperCase();
+      console.log(key);
+      if (let == currentLetter || currentLetter == ""){currentLetter = let;}
+      else {
+        newLetter();
+        console.log('new letter from multiple!');
+        currentLetter = let;
+      }
 
-    var activeLetter = letters[let];
+      var activeLetter = letters[let];
 
-    fill(backgroundColor);
-    letterW = activeLetter[0][1] * sizeMult + stretchVal;
-    letterH = activeLetter[0][0] * sizeMult;
-    rect(startX, startY, startX + letterW, startY + letterH); //new frame
+      fill(backgroundColor);
+      letterW = activeLetter[0][1] * sizeMult;
+      letterH = activeLetter[0][0] * sizeMult;
+      rect(startX, startY, startX + letterW, startY + letterH); //new frame
 
-    if (width-startX < (activeLetter[0][1] * sizeMult)){
-      newLine();
-    }
-
-    for (i=1; i<activeLetter.length; i++) {
-      console.log(activeLetter.length);
-      if (i==1) {fill(letterColor);}
-      else {fill(backgroundColor);}
-      beginShape();
-      for (j=0; j<activeLetter[i][0].length; j++) {
-        stretchVal = elong / stretchFactor;
-        if (activeLetter[i][1].includes(j)){
-          var x = activeLetter[i][0][j][1] * sizeMult + stretchVal + startX;
-          if (activeLetter.length == 2 && i == 1 && x > width-30){
+      for (i=1; i<activeLetter.length; i++) {
+        if (i==1) {fill(255-elong);}
+        else {fill(backgroundColor);}
+        beginShape();
+        for (j=0; j<activeLetter[i][0].length; j++) {
+          var x = activeLetter[i][0][j][1] * sizeMult + startX;
+          if (x > width-10){
             stopFlag = true;
+            console.log("over!");
           }
-          else if (activeLetter.length > 2 && i == activeLetter.length-1 && x > width - 30 - sizeMult){
-            stopFlag = true;
-          }
+          var y = activeLetter[i][0][j][0] * sizeMult + startY;
+          vertex(x, y);
         }
-        else if (activeLetter[i].length == 3 && activeLetter[i][2].includes(j)){var x = activeLetter[i][0][j][1] * sizeMult + stretchVal/2 + startX;}
-        else {var x = activeLetter[i][0][j][1] * sizeMult + startX;}
-        var y = activeLetter[i][0][j][0] * sizeMult + startY;
-        vertex(x, y);
-      }
-      endShape();
+        endShape();
 
-      if (stopFlag){
-        active = false;
-        newLine();
+        if (stopFlag){
+          console.log('end of line!');
+          active = false;
+          newLine();
+        }
       }
+
+      elong += 3;
+      if (elong>255){elong = 255;}
     }
-    elong += 5;
-    }
+
     else if (!keyIsPressed){
       currentLetter = "";
     }
@@ -122,7 +114,6 @@ function newLine(){
   startX = 0;
   startY += spaceVal + letterH;
   elong = 0;
-  stopFlag = false;
 }
 
 function newLetter(){
@@ -134,13 +125,12 @@ function newLetter(){
 function keyReleased(){
   if (keyCode == 13){newLine();} //enter
   else if (keyCode == 32){
+    console.log('space!');
     startX += 40;
-  }
-  else if (key.toUpperCase() == currentLetter && active){
-    console.log('new letter from release!');
+  } //space
+  // else (keyCode > 96 && keyCode < 123) {
+  else if (key.toUpperCase() == currentLetter){
+    console.log('newletter from release!');
     newLetter();
-  }
-  else if (!active){
-    active = true;
   }
 }
