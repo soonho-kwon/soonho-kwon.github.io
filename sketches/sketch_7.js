@@ -30,17 +30,14 @@ function setup() {
 function draw() {
   //reset each frame
   background(255);
-  console.log(displayed[0].length);
 
   if (displayed[0].length == 0){//nothing on screen
-    let s = "Start typing to begin"
-    textSize(Math.min(width/30,height/30));
+    let s = "start typing to begin"
+    textSize(Math.min(width/50,height/50));
     noStroke();
     fill(0);
     textAlign(CENTER, CENTER);
     text(s, 0, 37, width, height);
-
-    // console.log('???');
   }
 
   //drawing settings
@@ -48,9 +45,12 @@ function draw() {
   stroke(0);
 
   //strokeWeight
-  strokeVal = Math.min((w-x),(h-y))/(displayed.length * mostInList(displayed));
+  strokeVal = Math.min(functionalWidth,functionalHeight)/(((displayed.length/2) * mostInList(displayed)) * 8);
   if(strokeVal > 75){strokeVal = 75;}
   else if (strokeVal < 10){strokeVal = 10;}
+
+  console.log(Math.min((w-x),(h-y)));
+
   strokeWeight(strokeVal);
 
   for (i=0;i<displayed.length;i++){ //rows
