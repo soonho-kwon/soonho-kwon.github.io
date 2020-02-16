@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+body {
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgba(0,0,0,0.85);
+  background-color: rgb(229, 229, 229);
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 2.5%;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.container {
+  padding-bottom: 10%;
+  padding-top: 2.5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.footer{
+
+}
+
+/* --- nav --- */
+
+.navbar {
+  width: 100%;
+  padding-bottom: 5%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.navbar .nav-link {
+  padding-left: 0 !important;
+  color: black !important;
+}
+.navbar .nav-link:hover {
+  opacity: 0.5;
+}
+
+/* mobile nav css */
+@media (max-width: 575px) {
+  .mobile-space {
+    display: block !important;
+  }
+  .navbar ul {
+    display: block;
+    text-align: left;
+  }
+}
+
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .side-nav {
+    display: none;
+  }
+  .bottom-nav {
+    display: flex;
+    font-size: 1.6em;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* --- home --- */
+.cover {
+  width: 100%;
+}
+
+.header {
+  font-size: 1.25em;
+  padding-bottom: 2.5%;
+  font-weight: 400;
+}
+
+/* --- about --- */
+
+/* --- work -- */
+
+.section {
+  padding-bottom: 5%;
+}
+
+.row {
+  padding-bottom: 2.5%;
+}
+
+.mobile-space {
+  display: none;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5%;
+}
+
+.caption {
+  font-size: 0.85em;
+  opacity: 0.5;
+  text-align: right;
+}
