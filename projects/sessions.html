@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+  <title>Sessions - Soonho Kwon</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="../assets/rocket.png"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="../css/main.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Navigation -->
+  <nav class="navbar sans navbar-expand-sm navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Soonho Kwon</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="../work.html">Work</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../experiments.html">Experiments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../photo.html">Photo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../about.html">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <img class="photo" src="../assets/sessions/SE_Splash.png"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <h4>Sessions</h4>
+      <p>Summer 2019
+        <br>4 Weeks
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <p>Sessions is a tool that allows you to save and access different digital workspaces,
+        which are collections of apps, files, and websites that are related to a single task.
+      </p>
+      <p>This tool facilitates greater focus by reframing the way we use our computers to be
+        more task-oriented, and less app-oriented.
+      </p>
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="../assets/sessions/SE_Final.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <br><br>
+      <p><h1>Problem Space</h1>
+        We use our computers for several different purposes (projects, work,
+        studying), and with each of these contexts comes a unique digital workspace filled
+        with apps, files, tabs, and more. However, when switching from one task to another,
+        we don’t want to lose those precious tabs and that perfected window layout.
+        This results in digital clutter—remnants of other projects that might distract us.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">My friends Cameron and Marisa capture the essense of this project
+        clearly—modeling computer spaces closer to thinking spaces.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I want an adaptable digital computer space that generates according to function/the purpose I have in mind for actions. Ex: when I code, I want the computer to know how to arrange my windows coherently (lol, finder, stackoverflow, sublime, terminal, etc)</p>&mdash; Marisa Lu (@lumar_isa) <a href="https://twitter.com/lumar_isa/status/1077256943914401793?ref_src=twsrc%5Etfw">December 24, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <br><p>In this project, I make a tool that allows you to save these digital spaces and
+        access them later, greatly reducing the mental cost of switching tasks, and
+        facilitating greater focus through cleaner workspaces.
+      </p>
+      <img class="photo" src="../assets/sessions/SE_Icons.png"/>
+      <h1>Prototype</h1>
+      <p>For this project, I made a working prototype that fulfilled the main functions.
+        This allowed me to understand the user experience and receive feedback from
+        other people I beta tested with.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" controls>
+        <source src="../assets/sessions/SE_Main.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-9">
+      <h1>Functions</h1>
+      <p>I decided to focus on the core functions: creating, saving, opening, and closing.
+        Since these are familiar functions in authoring tools, I thought they would
+        afford an intuitive user experience.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Two versions of the options (create, open, and close), on desktop and touchbar.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="../assets/sessions/SE_Functions.png"/>
+      <img class="photo" src="../assets/sessions/SE_Touchbar.jpg"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-9">
+      <h1>Contextual Iconography</h1>
+      <p>It's helpful to have visual affordances for quick understanding of essential
+        information. Each Session has an automatically generated icon based on the
+        apps used.This was made through Command Line tools like <a class="link" href="https://imagemagick.org" target=_blank>imagemagick</a>
+        and <a class="link" href="https://github.com/mklement0/fileicon" target=_blank>fileicon</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Examples of some programmatically generated icons!
+      </p>
+    </div>
+    <div class="col-sm-3">
+      <img class="photo" src="../assets/sessions/SE_Icon-1.png"/>
+      <img class="photo" src="../assets/sessions/SE_Icon-2.png"/>
+    </div>
+    <div class="col-sm-3">
+      <img class="photo" src="../assets/sessions/SE_Icon-3.png"/>
+      <img class="photo" src="../assets/sessions/SE_Icon-4.png"/>
+    </div>
+    <div class="col-sm-3">
+      <img class="photo" src="../assets/sessions/SE_Icon-5.png"/>
+      <img class="photo" src="../assets/sessions/SE_Icon-2.png"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Custom icon in action (saving a new Session)
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="../assets/sessions/SE_Save.png"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-9">
+      <h1>Saving with JSON</h1>
+      <p>I decided to save the sessions as JSON files so they could be easily parsed and
+        meaningful information could be extracted. Made possible through <a class="link" href="https://apps.apple.com/us/app/json-helper-for-applescript/id453114608?mt=12" target=_blank>JSONHelper</a>.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Example JSON file for a Session. The saved information
+        includes app name, path, window layouts, and window information.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="../assets/sessions/SE_JSON.png"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-9">
+      <h1>Design Refinement</h1>
+      <p>There are some things I couldn’t do quickly enough in my prototyping stage,
+        so in my last step I refined and added some details that I would have liked to add using Sketch.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Example of a proposed save state.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="../assets/sessions/SE_Concept.png"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-9">
+      <h1>Last Thoughts</h1>
+      <p>Throughout this project, I kept thinking that this could be expanded to an
+        entire operating system. I felt restricted by the app-based paradigm that
+        macOS currently exists in, but I wanted to ultimately make something functional
+        that could potentially help many people now!
+      </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+<div class="footer">
+  <ul>
+    <li><a class="nav-link" href="mailto:soonhokwn@gmail.com">Email</a></li>
+    <li><a class="nav-link" href="https://www.linkedin.com/in/soonho-kwon/" target="_blank">LinkedIn</a></li>
+    <li><a class="nav-link" href="https://www.instagram.com/kwon.soonho/" target="_blank">Instagram</a></li>
+    <!-- <li><a class="nav-link" href="">Vimeo</a></li> -->
+    <li><a class="nav-link" href="resume.html" target="_blank">Resume</a></li>
+    <li><a class="nav-link" href="inspirations.html">Inspirations</a></li>
+    <li><a class="nav-link" href="">Things</a></li>
+  </ul>
+</div>
+
+</body>
+
+</html>
