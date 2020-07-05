@@ -2,10 +2,13 @@
 /* CSS Document */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&display=swap');
 
 body {
   font-size: 1.2em;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   /* color: rgba(0,0,0,0.85); */
   color: white;
@@ -15,24 +18,28 @@ body {
 }
 
 h1 {
+  /* font-family: 'Source Serif Pro', serif; */
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 600;
   /* margin-bottom: 2.5%; */
 }
 
 h2 {
+  /* font-family: 'Source Serif Pro', serif; */
   font-size: 1.4em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h3 {
+  /* font-family: 'Source Serif Pro', serif; */
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h4 {
+  /* font-family: 'Source Serif Pro', serif; */
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 hr {
@@ -62,8 +69,8 @@ hr {
 
 .footer {
   width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   /* background-color: rgb(215, 215, 215); */
   background-color: rgb(25, 25, 25);
   font-size: 0.85em;
@@ -135,13 +142,15 @@ hr {
 /* --- home --- */
 .cover {
   width: 100%;
+  padding-bottom: 5%;
 }
 
 .header {
   /* font-size: 1.25em; */
+  /* font-family: 'Source Serif Pro', serif; */
   font-size: 1.4em;
   padding-bottom: 5%;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* --- about --- */
