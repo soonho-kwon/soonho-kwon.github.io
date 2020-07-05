@@ -175,6 +175,12 @@ hr {
   padding-bottom: 5%;
 }
 
+.photo-gallery {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10%;
+}
+
 .caption {
   font-size: 0.85em;
   opacity: 0.5;
