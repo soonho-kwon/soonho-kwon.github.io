@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>Digital Interactions - Soonho Kwon</title>
+  <title>Tangible Interactions - Soonho Kwon</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,49 +42,24 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <img class="photo" src="assets/digital-interactions/DI_Splash.jpg"/>
+      <img class="photo" src="assets/tangible-interactions/TI_Splash.jpg"/>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-3">
-      <h4>Digital Interaction Experiments</h4>
+      <h4>Tangible Interaction Experiments</h4>
       <p>Spring 2019
         <br>2 Weeks
       </p>
     </div>
     <div class="col-sm-9">
-      <p>This project is a collection of interaction design experiments using a single
-        mobile input method. Through these experiments, I am deepening my understanding
-        of the nature of interactions and am developing a sense of how I ought to be designing them.
-      </p>
-      <br>
-      <h1>Problem Space</h1>
       <p>
-        In our current technology paradigm, the input tools we use to interface with our
-        digital spaces are largely limited to the keyboard, mouse, and trackpad. There is
-        a problem here because sometimes, these tools don’t afford the kind of interaction
-        appropriate for a certain function, and thus limiting the kind of experiences we build.
+        In this project, I experiment with 2DOF control over a robot with an ordinary smartphone.
+        Through this experiment, I learn a lot about how to better design hardware interactions.
       </p>
-      <br>
-      <h1>Navigation Tools</h1>
-      <p>
-        These are interactions that I’ve designed to supplement or reimagine the way we
-        interface with our everyday computer OS. We currently have two primary input devices
-        (keyboard and mouse), but these projects explore how our digital experiences might be
-        heightened, focused, or simplified through alternative input methods with existing hardware.
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <p class="caption">Rotational movement mapped to website scrolling.
-      </p>
-    </div>
-    <div class="col-sm-9">
       <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/digital-interactions/DI_Scrolling.mp4" type="video/mp4">
+        <source src="assets/tangible-interactions/TI_Croissant.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     </div>
@@ -93,78 +68,30 @@
   <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
+      <br>
+      <h1>Problem Space</h1>
       <p>
         These interactions map rotational movement to linear movement. I was initially
         concerned that this would be an incompatible pair, but it actually felt very
         natural, kind of like a dial. Plus, you could use the natural inertia of the rotation
         as an intuitive intent.
       </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <p class="caption">Mapped rotational movement to location in a video.
-      </p>
-    </div>
-    <div class="col-sm-9">
-      <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/digital-interactions/DI_LongScrub.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-9">
-      <p>
-        This interaction allows the user to easily navigate a video or movie, to relative
-        precision. This is for environments like home movies, where we might want to interface
-        with our videos without taking out a keyboard and mouse.
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <p class="caption">Precise mapping of rotation to frame advancement.
-      </p>
-    </div>
-    <div class="col-sm-9">
-      <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/digital-interactions/DI_FrameScrub.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-9">
-      <p>
-        For more specific observations or studying, there may be instances where it
-        is important to view a video in a frame by frame manner. This interaction offers
-        that capacity, as well as triggers a haptic feedback at each frame change.
-      </p>
       <br>
-      <h1>Creative Tools</h1>
-      <p>The nature of the tools we use directrlt impacts the nature of the things we
-        create with them. When we afford the input tool greater humanitiy/ human touch,
-        we are eliminating that extra layer of abstraction and perhaps allowing the
-        created thing to be more inherently human.
+      <h1>Iteration and Prototyping</h1>
+      <p>
+        These are the steps I took to arrive at the final form.
       </p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-3">
-      <p class="caption">Mapped rotational movement to the brightness of a photo in Adobe Lightroom.
+      <p class="caption">Initial functional prototype made with a servo and my OSC app
       </p>
     </div>
     <div class="col-sm-9">
       <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/digital-interactions/DI_Lightroom.mp4" type="video/mp4">
+        <source src="assets/tangible-interactions/TI_InitialDemo.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     </div>
@@ -174,21 +101,85 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
       <p>
-        I started to see how it could be powerful to use a physical granularity tool as a powerful
-        input device in creative applications. For example, there is something inherently satisfying
-        in having haptics tell you every stop of exposure you change!
+        After the initial functional prototype, I decided to take it further and make
+        a full pan-tilt system. I decided against using that same servo because of the
+        limited rotational range as well as the heavy limitations with passing many
+        values quickly. I decided to use <a class='link' href='https://www.iq-control.com' target=_blank>IQ Motion Module</a> motors.
       </p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-3">
-      <p class="caption">Mapped rotational movement to the brush size in Photoshop.
+      <p class="caption">Some developments with the form, considering the Arduino placement
+      </p>
+    </div>
+    <div class="col-sm-3">
+      <img class='photo' src="assets/tangible-interactions/TI_Fries-1.jpg"/>
+    </div>
+    <div class="col-sm-3">
+      <img class='photo' src="assets/tangible-interactions/TI_Fries-2.jpg"/>
+    </div>
+    <div class="col-sm-3">
+      <img class='photo' src="assets/tangible-interactions/TI_Tortilla-0.jpg"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        For these prototypes, I designed the top cover to be removeable and the front
+        to be clear acrylic, so debugging the electricity would be easier. I planned to
+        seal everything later on.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Functional wooden prototype. Notice the panel mounts that make
+        the model self-contained and easy to power!
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class='photo' src="assets/tangible-interactions/TI_Tortilla-3.jpg"/>
+      <!-- <img class='photo' src="assets/tangible-interactions/TI_Tortilla-4.jpg"/> -->
+      <img class='photo' src="assets/tangible-interactions/TI_Tortilla-2.jpg"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        This was the first working prototype. When I actually saw the robot copying my
+        movement, I started to easily see the robot as an extension of my hand, and
+        found myself manipulating its roations extremely intuitively.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">First working demo. Not visible in the video, but I also programmed
+        haptics to trigger when the phone is rotated past the robot’s reach.
       </p>
     </div>
     <div class="col-sm-9">
       <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/digital-interactions/DI_Photoshop.mp4" type="video/mp4">
+        <source src="assets/tangible-interactions/TI_Wooden_First.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/tangible-interactions/TI_Tortilla_WithPhone.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     </div>
@@ -198,17 +189,39 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
       <p>
-        This was a fun experiment where I could see some simulaneous input for a single action.
-        It reminded me of how we subconsciously do qualitative actions like increase pressure
-        of a paintbrush to thicken the stroke.
+        Lastly, I created a polished case with translucent white acrylic and covered the
+        front to hide the electronic components.
       </p>
-      <br>
-      <h1>Final Thoughts</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Functional wooden prototype. Notice the panel mounts that make
+        the model self-contained and easy to power!
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class='photo' src="assets/tangible-interactions/TI_Croissant-1.jpg"/>
+      <img class='photo' src="assets/tangible-interactions/TI_Croissant-2.jpg"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <h1>Final Thouhts</h1>
       <p>
-        These interactions I experimented with helped me to extend my understanding how
-        we could possible interface with our computers in a more intuitive way, but also about
-        restraint when a new method isn't necessary. I learned about the affordances of physical objects,
-        and how that could help/hurt my interaction design.
+        This interaction exploration allowed me to understand an approach to make robots
+        more approachable and intuitive to interface with. Although it is not a far reach
+        to type out angles for these different motors to go to, the physical mainpulation affords
+        an intuition that allows you to focus exactly on what the robot should be doing,
+        not how it should do that thing. I started to understand how thoughtful interactions, even
+        for seemingly intimidating things like robots, can make tasks extremely approachable and
+        intuitive.
+        <br><br>
+        This is just the foundation—there is so much more to be done with different attachments and
+        possibly more degrees of freedom. I hope to find time to continue these explorations!
       </p>
     </div>
   </div>
