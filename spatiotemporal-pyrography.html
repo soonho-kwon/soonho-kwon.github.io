@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+  <title>Spatial Controller - Soonho Kwon</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/rocket.png"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Navigation -->
+  <nav class="navbar sans navbar-expand-sm navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/">Soonho Kwon</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/work">Work</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/experiments">Experiments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/photo">Photo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <img class="photo" src="assets/spatial-controller/SC-splash.jpg"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <h4>Spatial Controller</h4>
+      <p>Spring 2019
+        <br>2 Weeks
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <p>In this project I build a method that allows the iPhone to become a
+        powerful 3D input device that can manipulate and interact with
+        digital 3D environments.
+      </p>
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/spatial-controller/SC_Annotations.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/spatial-controller/SC_Annotations.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <br>
+      <h1>Problem Space</h1>
+      <p>
+        With the advent of AR, VR, and other technologies,
+        3D interfaces are becoming more common to see. However, when viewed on
+        a 2D computer screen with a 2D input tool (mouse), we are using suboptimal
+        methods to interact with digital 3D content.
+      </p>
+      <br>
+      <p><h1>Input App</h1>
+        In order to prototype this interaction paradigm, I built a custom
+        app with Swift that streamed real-time position and orientation
+        data to my computer.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Debug UI version of the app I developed.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/spatial-controller/SC-inputapp.png">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Example of cordless positional data streaming in Unity 3D
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/spatial-controller/SC_Positional.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p><h1>Prototypes</h1>
+        Here are a set of quick interaction explorations to see how this technique can be used in more creative and meaningful ways.
+        Through these experiments I was trying to learn the right kind of tasks could benefit the most from spatial input/ spatial
+        companion apps.
+      </p>
+      <br>
+      <p><h1>Interaction 1: Haptic Zones</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">In each of these grey volumes, continuous haptics are being triggered at varying strengths.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/spatial-controller/SC_HapticZone.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        Each of the grey volumes is embedded with a different ‘haptic viscocity’ with haptic feedback at varying frequencies and intensities.
+        This passive information could be extremely rich when objects have different characteristics, especially as our haptic vocabulary
+        becomes more diverse in range.
+      </p>
+      <br>
+      <p><h1>Interaction 2: Camera Control</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Camera rotation based on orientation of iPhone.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/spatial-controller/SC_Camera_Control.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        Orbiting in 3D software can be a distraction in a user's flow, and having a more natural
+        way to change my camera angle allows me to be that much more focused on what I’m trying to do.
+        This might work in a viewing setting, but less effective while authoring.
+      </p>
+      <br>
+      <p><h1>Interaction 3: Spatial 3D Touch</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Using the iPhone 3D Touch capabilities to manipulate these digital 3D objects in different ways.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/spatial-controller/SC_3DTouch.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        Here I map the force of the touch value to some attribute in the digital 3D object. I started asking questions
+        like: “Is this interaction an appropriate metaphor for making something brighter? faster?”
+      </p>
+      <p>
+        Another important detail to highlight is that there are haptics in this interaction. A haptic feedback
+        is triggered when the digital cursor collides with and exits a digital object. It makes your brain believe
+        that there are “invisible objects” in reality!
+      </p>
+      <br>
+      <p><h1>Interaction 4: Collaborative Annotations</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">A video highlighting the back and forth interaction between the digital 3D scene and the device itself.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <video width="100%" height="100%" autoplay muted loop>
+        <source src="assets/spatial-controller/SC_Annotation_Overlay.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        I created a tool that allows single or multiple users to use their own devices to nagivate and locally
+        place thoughts in a 3D scene.
+      </p>
+      <p>
+        From various demos, I found that when one isn’t concerned as much about perfectly placing and orienting
+        a comment, they have an easier time stringing thoughts and being more focused in this headspace. This felt
+        like an appropriate use of this technique.
+      </p>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="footer">
+  <ul>
+    <li><a class="nav-link" href="mailto:soonhokwn@gmail.com">Email</a></li>
+    <li><a class="nav-link" href="https://www.linkedin.com/in/soonho-kwon/" target="_blank">LinkedIn</a></li>
+    <li><a class="nav-link" href="https://www.instagram.com/kwon.soonho/" target="_blank">Instagram</a></li>
+    <!-- <li><a class="nav-link" href="">Vimeo</a></li> -->
+    <li><a class="nav-link" href="https://soonhokwon.com/resume" target="_blank">Resume</a></li>
+    <li><a class="nav-link" href="https://soonhokwon.com/inspirations">Inspirations</a></li>
+    <li><a class="nav-link" href="">Things</a></li>
+  </ul>
+</div>
+
+</body>
+
+</html>

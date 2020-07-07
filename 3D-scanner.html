@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+  <title>3D Scanner - Soonho Kwon</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/rocket.png"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Navigation -->
+  <nav class="navbar sans navbar-expand-sm navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/">Soonho Kwon</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/work">Work</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/experiments">Experiments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/photo">Photo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://soonhokwon.com/about">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <img class="photo" src="assets/3D-scanner/3DS_Splash.jpg"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <h4>3D Scanner</h4>
+      <p>Fall 2017
+        <br>2 Weeks
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <p>For my physical computing class, I built a low-resolution 3D scanner with an
+        IR proximity sensor, a couple of hi-torque servo motors, and an Arduino Uno. For
+        this project, I programmed the Arduino and Processing scripts, while my partner,
+        <a class='link' href='http://christinaxbrown.com' target=_blank>Christina</a>, focused on the fabrication.
+      </p>
+      <img class='photo' src='assets/3D-scanner/3DS_Scan.gif'>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <br>
+      <h1>Process</h1>
+      <p>
+        There are two independent parts of this mechanism: the panning head and the moving
+        bed. The idea of this project is that for every point on the bed, the head will
+        scan the distance between it and the bed. The aggregate grid of points in
+        space would ideally resemble the object scanned.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">The full system. There are two servos with gears that move two sliding surfaces.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/3D-scanner/3DS_Product_1.jpg">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">One servo is used to constantly move the IR sensor back and forth, while it is reading and recording the distance.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/3D-scanner/3DS_Movement-1.gif">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Every time the sensor does one loop and returns to its original position, the bed shifts forward one notch.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/3D-scanner/3DS_Movement-2.gif">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p><h1>Limitation or Feature?</h1>
+        The problem was that the IR sensor is not meant to measure distances of specific
+        points. Because of this, all the point clouds turned out much more blob-like and
+        not very precise. Though the mechanism worked perfectly, the sensor was not as
+        accurate as we had anticipated.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">These are examples of the interactive point-clouds generated with this machine.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/3D-scanner/3DS_Result-1.png">
+      <img class="photo" src="assets/3D-scanner/3DS_Result-2.png">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p><h1>Final Thoughts</h1>
+        Though not easily recognizable, I was astounded by how these low-resolutions
+        scans started to look like mountatin ranges—how scale seemed to flip from
+        small to massive.
+        <br><br>
+        There were two major skills that I developed throughout this project: multi-platform
+        programming and physical modelling.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <ul>
+    <li><a class="nav-link" href="mailto:soonhokwn@gmail.com">Email</a></li>
+    <li><a class="nav-link" href="https://www.linkedin.com/in/soonho-kwon/" target="_blank">LinkedIn</a></li>
+    <li><a class="nav-link" href="https://www.instagram.com/kwon.soonho/" target="_blank">Instagram</a></li>
+    <!-- <li><a class="nav-link" href="">Vimeo</a></li> -->
+    <li><a class="nav-link" href="https://soonhokwon.com/resume" target="_blank">Resume</a></li>
+    <li><a class="nav-link" href="https://soonhokwon.com/inspirations">Inspirations</a></li>
+    <li><a class="nav-link" href="">Things</a></li>
+  </ul>
+</div>
+
+</body>
+
+</html>
