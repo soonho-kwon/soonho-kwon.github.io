@@ -42,77 +42,146 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <img class="photo" src="assets/spatial-controller/SC-splash.jpg"/>
+      <img class="photo" src="assets/spatiotemporal/ST_Splash.jpg"/>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-3">
-      <h4>Spatial Controller</h4>
-      <p>Spring 2019
+      <h4>Spatiotemporal Pyrography</h4>
+      <p>Spring 2017
         <br>2 Weeks
       </p>
     </div>
     <div class="col-sm-9">
-      <p>In this project I build a method that allows the iPhone to become a
-        powerful 3D input device that can manipulate and interact with
-        digital 3D environments.
+      <p>In this project, I make a fun new way of capturing and seeing 3D spaces using a preexisting
+        photographic technique. I use fire to see a space through the way sparks ricochet off the wall.
+        In a sense, I was observing an ‘implied’ space.
       </p>
       <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/spatial-controller/SC_Annotations.mp4" type="video/mp4">
+        <source src="assets/spatiotemporal/ST_View-1.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     </div>
   </div>
 
-  <!-- <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-9">
-      <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/spatial-controller/SC_Annotations.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div> -->
-
   <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
-      <br>
-      <h1>Problem Space</h1>
+      <h1>Context</h1>
       <p>
-        With the advent of AR, VR, and other technologies,
-        3D interfaces are becoming more common to see. However, when viewed on
-        a 2D computer screen with a 2D input tool (mouse), we are using suboptimal
-        methods to interact with digital 3D content.
+        There are countless ways of 3D scanning a space. With depth sensing cameras,
+        lidars and computer vision becoming increasingly accessible, this project is
+        obviously not concerned with practicality. It is about seeing what a space can
+        be, how it can be represented in ways that add information and color.
       </p>
       <br>
-      <p><h1>Input App</h1>
-        In order to prototype this interaction paradigm, I built a custom
-        app with Swift that streamed real-time position and orientation
-        data to my computer.
+      <p><h1>Process</h1>
+        When spinning steel wool in a circular motion in a confined space, one essentially
+        visualizes a slice of that space through the ricochets of the sparks off the
+        walls. This is what it looks like.
       </p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-3">
-      <p class="caption">Debug UI version of the app I developed.
+      <p class="caption">What it looks like in real life. The sparks are flung around in a circular motion.
       </p>
     </div>
     <div class="col-sm-9">
-      <img class="photo" src="assets/spatial-controller/SC-inputapp.png">
+      <img class="photo" src="assets/spatiotemporal/ST_Example.gif">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        With long exposure photography, we can take a single picture of an entire sequence
+        of sparks, resulting in a frame like this:
+      </p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-3">
-      <p class="caption">Example of cordless positional data streaming in Unity 3D
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/spatiotemporal/ST_OneLayer.jpg">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        With long exposure photography, we can take a single picture of an entire sequence
+        of sparks, resulting in a frame like this:
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">A stacked image of four different long-exposure images taken with the steel-wool.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/spatiotemporal/ST_Stack-d.jpg">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        However, with those distracting circles and noise in the middle, I decided to try another
+        method—video. this would maintain the highlighting of the building edges while
+        mitigating any central noise.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">This is an example of a single clip of the sparks revealing the perpendicular cross section of the tunnel.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/spatiotemporal/ST_Layer.gif">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
+      <p>
+        I used Cinema 4D to place planes in space that are proportional to the distance interval
+        each video was taken at, and I created video texture maps for each video, respectively
+        placing them on the appropriate plane. After some camerawork, I arrived at my final deliverable.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">The Cinema4D Setup. I added alpha channels to the videos to only show the sparks, and stacked them in 3D space with planes.
+      </p>
+    </div>
+    <div class="col-sm-9">
+      <img class="photo" src="assets/spatiotemporal/ST_C4D.png">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="caption">Another view of the final result.
       </p>
     </div>
     <div class="col-sm-9">
       <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/spatial-controller/SC_Positional.mp4" type="video/mp4">
+        <source src="assets/spatiotemporal/ST_View-2.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     </div>
@@ -121,125 +190,20 @@
   <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-9">
-      <p><h1>Prototypes</h1>
-        Here are a set of quick interaction explorations to see how this technique can be used in more creative and meaningful ways.
-        Through these experiments I was trying to learn the right kind of tasks could benefit the most from spatial input/ spatial
-        companion apps.
-      </p>
-      <br>
-      <p><h1>Interaction 1: Haptic Zones</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <p class="caption">In each of these grey volumes, continuous haptics are being triggered at varying strengths.
-      </p>
-    </div>
-    <div class="col-sm-9">
-      <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/spatial-controller/SC_HapticZone.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-9">
+      <h1>Final Thoughts</h1>
       <p>
-        Each of the grey volumes is embedded with a different ‘haptic viscocity’ with haptic feedback at varying frequencies and intensities.
-        This passive information could be extremely rich when objects have different characteristics, especially as our haptic vocabulary
-        becomes more diverse in range.
+        This might not be practical, but this project was not about that. The value in the
+        work here is the reapplication of a process that has been cemented in solely
+        photography since its conception. This project was about being able to take a
+        process to its limits and explore what it could reveal.
+        <br><br>
+        Through this project, I learned more intuitively how to dissociate myself from the
+        existing paradigms to try to imagine other ones. If I am to imagine future environments
+        and interfaces, I think I would find this skill priceless. Also, I think it looks sick.
       </p>
-      <br>
-      <p><h1>Interaction 2: Camera Control</h1>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-sm-3">
-      <p class="caption">Camera rotation based on orientation of iPhone.
-      </p>
-    </div>
-    <div class="col-sm-9">
-      <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/spatial-controller/SC_Camera_Control.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-9">
-      <p>
-        Orbiting in 3D software can be a distraction in a user's flow, and having a more natural
-        way to change my camera angle allows me to be that much more focused on what I’m trying to do.
-        This might work in a viewing setting, but less effective while authoring.
-      </p>
-      <br>
-      <p><h1>Interaction 3: Spatial 3D Touch</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <p class="caption">Using the iPhone 3D Touch capabilities to manipulate these digital 3D objects in different ways.
-      </p>
-    </div>
-    <div class="col-sm-9">
-      <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/spatial-controller/SC_3DTouch.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-9">
-      <p>
-        Here I map the force of the touch value to some attribute in the digital 3D object. I started asking questions
-        like: “Is this interaction an appropriate metaphor for making something brighter? faster?”
-      </p>
-      <p>
-        Another important detail to highlight is that there are haptics in this interaction. A haptic feedback
-        is triggered when the digital cursor collides with and exits a digital object. It makes your brain believe
-        that there are “invisible objects” in reality!
-      </p>
-      <br>
-      <p><h1>Interaction 4: Collaborative Annotations</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <p class="caption">A video highlighting the back and forth interaction between the digital 3D scene and the device itself.
-      </p>
-    </div>
-    <div class="col-sm-9">
-      <video width="100%" height="100%" autoplay muted loop>
-        <source src="assets/spatial-controller/SC_Annotation_Overlay.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-9">
-      <p>
-        I created a tool that allows single or multiple users to use their own devices to nagivate and locally
-        place thoughts in a 3D scene.
-      </p>
-      <p>
-        From various demos, I found that when one isn’t concerned as much about perfectly placing and orienting
-        a comment, they have an easier time stringing thoughts and being more focused in this headspace. This felt
-        like an appropriate use of this technique.
-      </p>
-    </div>
-  </div>
 
 
 </div>
