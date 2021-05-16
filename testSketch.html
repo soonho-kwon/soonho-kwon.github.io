@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <meta charset="utf-8" />
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    </style>
+
+  </head>
+  <body>
+    <script>
+      var boxWidth = 20;
+      var lineWidth = 10;
+      var boxes = [];
+      var boxesX, boxesY;
+
+      var x, y;
+
+      function setup() {
+        createCanvas(window.innerWidth, window.innerHeight);
+        noCursor();
+        x = width / 2;
+        y = height / 2;
+        boxesX = int(width / boxWidth);
+        boxesY = int(height / boxWidth);
+
+        fill(255);
+        noStroke();
+      }
+
+      function draw() {
+        background(0);
+        for (i = 0; i < boxesX; i++) {
+          for (j = 0; j < boxesY; j++) {
+
+            var circleWidth = 1 / (dist(i * boxWidth, j * boxWidth, x, y) / 1000);
+            if (circleWidth > 15) {
+              circleWidth = 15;
+            }
+
+            push();
+            translate(i * boxWidth + lineWidth, j * boxWidth + lineWidth);
+            circle(boxWidth / 2, boxWidth / 2, circleWidth);
+            pop();
+          }
+        }
+      }
+
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+        boxesX = int(width / boxWidth);
+        boxesY = int(height / boxWidth);
+      }
+
+      function mouseMoved() {
+        active = true;
+        x = mouseX;
+        y = mouseY;
+      }
+    </script>
+  </body>
+</html>

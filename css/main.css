@@ -60,6 +60,17 @@ hr {
   text-decoration: underline;
 }
 
+a.imghov {
+  color: rgb(105, 143, 255);
+}
+
+a.imghov:hover img{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 5%;
+}
+
 .container {
   padding-bottom: 7.5%;
   padding-top: 2.5%;
