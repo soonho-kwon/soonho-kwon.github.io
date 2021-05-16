@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="js/hover.js"></script>
 </head>
 
 <body>
@@ -42,8 +43,7 @@
 
   <div class="row box">
     <div class="col-sm-6">
-      <!-- <img class="photo" src="assets/Portrait.jpg"> -->
-      <img class="photo" src="assets/Portrait-2.jpg">
+      <img id="aboutPhoto" src="assets/portrait.jpg">
     </div>
     <div class="col-sm-6">
       <p>
@@ -57,7 +57,6 @@
       <p>
         I’m currently designing 3D procedural authoring tools at
         <a class="link" href="https://adobe.design" target=_blank>Adobe.</a>
-
       </p>
 
       <p>
@@ -68,9 +67,10 @@
       </p>
 
       <p>
-        When not designing, you can find me <a class="link" href="">skateboarding</a>, <a class="link" href="">climbing</a>, or
-        jotting down something on my <a class="link" href="">field notes</a>.
+        When not designing, you can find me <a id="skateboarding" onmouseover="mouseOverSkate()" onmouseout="mouseOut()" href="">skateboarding</a>, <a id="climbing" onmouseover="mouseOverClimb()" onmouseout="mouseOut()" href="">climbing</a>, or
+        jotting down something on my <a id="fieldNotes" onmouseover="mouseOverFieldNotes()" onmouseout="mouseOut()" href="">field notes</a>.
       </p>
+
       <br>
       <p>
         Feel free to

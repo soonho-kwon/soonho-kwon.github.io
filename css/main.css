@@ -60,17 +60,6 @@ hr {
   text-decoration: underline;
 }
 
-a.imghov {
-  color: rgb(105, 143, 255);
-}
-
-a.imghov:hover img{
-  display: block;
-  width: 100%;
-  height: auto;
-  padding-bottom: 5%;
-}
-
 .container {
   padding-bottom: 7.5%;
   padding-top: 2.5%;
@@ -165,6 +154,36 @@ a.imghov:hover img{
 }
 
 /* --- about --- */
+
+#aboutPhoto {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5%;
+}
+
+#skateboarding {
+  color: rgb(105, 143, 255);
+}
+
+#skateboarding:hover {
+  text-decoration: underline;
+}
+
+#climbing {
+  color: rgb(0, 255, 255);
+}
+
+#climbing:hover {
+  text-decoration: underline;
+}
+
+#fieldNotes {
+  color: rgb(105, 143, 255);
+}
+
+#fieldNotes:hover {
+  text-decoration: underline;
+}
 
 /* --- work -- */
 
