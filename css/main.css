@@ -166,14 +166,16 @@ hr {
 }
 
 #skateboarding:hover {
+  color: rgb(105, 143, 255);
   text-decoration: underline;
 }
 
 #climbing {
-  color: rgb(0, 255, 255);
+  color: rgb(105, 143, 255);
 }
 
 #climbing:hover {
+  color: rgb(105, 143, 255);
   text-decoration: underline;
 }
 
@@ -182,6 +184,7 @@ hr {
 }
 
 #fieldNotes:hover {
+  color: rgb(105, 143, 255);
   text-decoration: underline;
 }
 
