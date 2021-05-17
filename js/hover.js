@@ -11,5 +11,5 @@ function mouseOverFieldNotes() {
 }
 
 function mouseOut() {
-  document.getElementById("aboutPhoto").src="assets/portrait.jpg"
+  document.getElementById("aboutPhoto").src="assets/Portrait.jpg"
 }
