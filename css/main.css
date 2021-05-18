@@ -156,9 +156,10 @@ hr {
 /* --- about --- */
 
 #aboutPhoto {
+  border-radius: 10px;
   width: 100%;
   height: auto;
-  padding-bottom: 5%;
+  /* padding-bottom: 5%; */
 }
 
 #skateboarding {
