@@ -1,5 +1,5 @@
 function mouseOverSkate() {
-  document.getElementById("aboutPhoto").src="assets/skateboarding.gif"
+  document.getElementById("aboutPhoto").src="assets/sb.gif"
 }
 
 function mouseOverClimb() {
