@@ -93,6 +93,8 @@ hr {
 
 .hover_img a:hover span { display:block; }
 
+
+
 /* --- nav --- */
 
 .navbar {
@@ -223,4 +225,138 @@ hr {
 
 .notes {
   text-align: right;
+}
+
+/* Desktop: hide mobile header and mobile menu */
+@media (min-width: 601px) {
+  .mobile-header,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* ============================
+   MOBILE TYPOGRAPHY OVERRIDES
+   ============================ */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 0.95em; /* globally scale everything down */
+    line-height: 1.45;
+  }
+
+  h1, h2, h3, h4 {
+    font-size: 1em;  /* tighter headings */
+    line-height: 1.2;
+  }
+
+  .header {
+    font-size: 1.15em; /* your homepage intro header */
+  }
+
+  .container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  p {
+    margin-bottom: 1.1em; /* improves readability */
+  }
+
+/* ============================
+   MOBILE HEADER + NAV
+   ============================ */
+
+  /* Remove existing stacked nav behavior */
+  .navbar ul {
+    display: none !important;
+  }
+
+  .navbar {
+    padding-bottom: 0 !important;
+  }
+
+  /* New header bar */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    background: black;
+    /* border-bottom: 1px solid rgba(255,255,255,0.15); */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .mobile-title {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.6em;
+    line-height: 1;
+  }
+
+  /* Hidden menu */
+  /* .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 6%;
+    background: black;
+  } */
+
+  /* .mobile-menu.open {
+    display: flex;
+  } */
+
+  /* Mobile dropdown menu */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 5%;                 /* start collapsed */
+    background: black;
+    /* border-bottom: 1px solid rgba(255,255,255,0.1); */
+
+    /* animation prep */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-4px);
+    transition:
+      max-height 0.35s ease,
+      opacity 0.3s ease,
+      transform 0.35s ease;
+  }
+
+  /* Open state — smooth slide + fade in */
+  .mobile-menu.open {
+    display: flex;
+    padding: 20px 6%;              /* restore padding */
+    max-height: 300px;             /* enough for 4–6 links */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .mobile-menu a {
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .mobile-menu {
+  list-style: none;      /* removes bullets */
+  /* padding-left: 0;       removes default left indent */
+  margin: 0;             /* optional: tightens spacing */
+  text-align: right;
+  
+}
+
 }
