@@ -16,6 +16,19 @@
 
 <body>
 
+<!-- Mobile Header (shown only on small screens) -->
+<nav class="mobile-header">
+  <div class="mobile-title">Soonho Kwon</div>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+
+<ul class="mobile-menu" id="mobileMenu">
+  <li><a href="https://soonhokwon.com/work">Work</a></li>
+  <li><a href="https://soonhokwon.com/experiments">Experiments</a></li>
+  <li><a href="https://soonhokwon.com/photo">Photo</a></li>
+  <li><a href="https://soonhokwon.com/about">About</a></li>
+</ul>
+
 <div class="container">
 
   <!-- Navigation -->
@@ -148,7 +161,11 @@
     <li><a class="nav-link" href="">Things</a></li>
   </ul>
 </div>
-
+<script>
+  document.getElementById("hamburger").onclick = () => {
+    document.getElementById("mobileMenu").classList.toggle("open");
+  };
+</script>
 </body>
 
 </html>
