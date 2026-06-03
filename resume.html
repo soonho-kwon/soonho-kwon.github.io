@@ -15,18 +15,13 @@
 
 <body>
 
-<!-- Mobile Header (shown only on small screens) -->
-<nav class="mobile-header">
-  <a class="mobile-title" href="https://soonhokwon.com/">Soonho Kwon</a>
-  <button class="hamburger" id="hamburger">☰</button>
+<!-- Floating Tab Bar -->
+<nav class="tab-bar">
+  <a class="tab" href="https://soonhokwon.com/">Home</a>
+  <a class="tab" href="https://soonhokwon.com/work">Work</a>
+  <a class="tab" href="https://soonhokwon.com/experiments">Experiments</a>
+  <a class="tab" href="https://soonhokwon.com/about">About</a>
 </nav>
-
-<ul class="mobile-menu" id="mobileMenu">
-  <li><a href="https://soonhokwon.com/work">Work</a></li>
-  <li><a href="https://soonhokwon.com/experiments">Experiments</a></li>
-  <li><a href="https://soonhokwon.com/photo">Photo</a></li>
-  <li><a href="https://soonhokwon.com/about">About</a></li>
-</ul>  
 
   <div class="container">
     <div class="row">
@@ -36,10 +31,16 @@
     </div>
   </div>
 <script>
-  document.getElementById("hamburger").onclick = () => {
-    document.getElementById("mobileMenu").classList.toggle("open");
-  };
+  // Tab bar fade-in on load
+  document.querySelector('.tab-bar').style.opacity = '0';
+  window.addEventListener('load', () => {
+    const bar = document.querySelector('.tab-bar');
+    bar.style.transition = 'opacity 0.2s ease-in';
+    bar.style.opacity = '1';
+  });
 </script>
+
+
 
 </body>
 
