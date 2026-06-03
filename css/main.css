@@ -227,6 +227,17 @@ hr {
 /* ============================
    MOBILE TYPOGRAPHY OVERRIDES
    ============================ */
+@media (max-width: 576px) {
+  /* Tighten image-to-title gap, add space between project cards */
+  .cover {
+    padding-bottom: 0.5%;
+  }
+
+  .col-sm-6 {
+    margin-bottom: 8%;
+  }
+}
+
 @media (max-width: 600px) {
 
   body {
