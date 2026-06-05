@@ -26,99 +26,52 @@
 
 <div class="container">
 
-
-  <!-- Section -->
-  <!-- Projects
-    Basically a row contains 2 projects each occupying 6 out of 12 columns.
-    Duplicate the row box div to make another row of 2 projects. -->
-  <div class="section">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>Spatial Design</h1>
-      </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="https://soonhokwon.com/spatial-controller"><img class="cover" src="assets/spatial-controller/SC_Thumb.gif"></a>
+      <p><h4>Spatial Controller</h4>
+      <p>Tool that transforms our mobile phones into powerful
+      3D input devices.</p>
     </div>
 
-    <div class="row">
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/spatial-controller"><img class="cover" src="assets/spatial-controller/SC_Thumb.gif"></a>
-        <p><h4>Spatial Controller</h4>
-        <p>Tool that transforms our mobile phones into powerful
+    <div class="col-sm-6">
+      <a href="https://soonhokwon.com/cruise-automation"><img class="cover" src="assets/cruise-automation/CA_Thumb.gif"></a>
+      <p><h4>Cruise Automation</h4>
+      Spatial visualization of self-driving technology.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="https://soonhokwon.com/brain"><img class="cover" src="assets/brain/brain_thumb.jpg"></a>
+      <p><h4>Brain Technologies</h4>
+        Humanizing technology through intent based computer
+        experiences.</p>
+    </div>
+
+    <div class="col-sm-6">
+      <a href="https://soonhokwon.com/sessions"><img class="cover" src="assets/sessions/SE_Thumb.gif"></a>
+      <p><h4>Sessions</h4>
+        A tool that reimagines the way we use computers to
+        reduce cognitive strain.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="https://soonhokwon.com/digital-interactions"><img class="cover" src="assets/digital-interactions/DI_Thumb.gif"></a>
+      <p><h4>Digital Interaction Experiments</h4>
+        Tool that transforms our mobile phones into powerful
         3D input devices.</p>
-      </div>
-
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/cruise-automation"><img class="cover" src="assets/cruise-automation/CA_Thumb.gif"></a>
-        <p><h4>Cruise Automation</h4>
-        Spatial visualization of self-driving technology.</p>
-      </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/taste-museum"><img class="cover" src="assets/taste-museum/TM_Thumb.gif"></a>
-        <p><h4>Taste Museum</h4>
-          Virtual Reality space designed to communicate someone’s unique taste.</p>
-      </div>
+    <div class="col-sm-6">
+      <a href="https://soonhokwon.com/tangible-interactions"><img class="cover" src="assets/tangible-interactions/TI_Thumb.gif"></a>
+      <p><h4>Tangible Interaction Experiments</h4>
+        Experimental way to tangibly and remotely operate a
+        simple robot.</p>
     </div>
   </div>
-
-
-  <div class="section">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>Novel Interactions</h1>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/brain"><img class="cover" src="assets/brain/brain_thumb.jpg"></a>
-        <p><h4>Brain Technologies</h4>
-          Humanizing technology through intent based computer
-          experiences.</p>
-      </div>
-
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/sessions"><img class="cover" src="assets/sessions/SE_Thumb.gif"></a>
-        <p><h4>Sessions</h4>
-          A tool that reimagines the way we use computers to
-          reduce cognitive strain.</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/digital-interactions"><img class="cover" src="assets/digital-interactions/DI_Thumb.gif"></a>
-        <p><h4>Digital Interaction Experiments</h4>
-          Tool that transforms our mobile phones into powerful
-          3D input devices.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="section">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>Tangible Design</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/tangible-interactions"><img class="cover" src="assets/tangible-interactions/TI_Thumb.gif"></a>
-        <p><h4>Tangible Interaction Experiments</h4>
-          Experimental way to tangibly and remotely operate a
-          simple robot.</p>
-      </div>
-
-      <div class="col-sm-6">
-        <a href="https://soonhokwon.com/form-semantics"><img class="cover" src="assets/form-semantics/FS_Thumb.gif"></a>
-        <p><h4>Form and Semantics</h4>
-          Experiments in phyiscal prototyping with analog materials.</p>
-      </div>
-    </div>
-  </div>
-
 
 </div>
 
@@ -134,7 +87,7 @@
 <script>
   // Tab bar fade-in on load
   document.querySelector('.tab-bar').style.opacity = '0';
-  window.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const bar = document.querySelector('.tab-bar');
     bar.style.transition = 'opacity 0.2s ease-in';
     bar.style.opacity = '1';

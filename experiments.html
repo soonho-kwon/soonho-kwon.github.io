@@ -68,10 +68,9 @@
     </div>
 
     <div class="col-sm-6">
-      <a href=""><img class="cover" src="assets/face-filter/FF_Thumb.jpg"></a>
-      <p><h4>AR Face Filters</h4>
-        A regular exploration of face-anchored augmented reality through
-        Facebook’s Spark AR platform.
+      <a href="https://soonhokwon.com/taste-museum"><img class="cover" src="assets/taste-museum/TM_Thumb.gif"></a>
+      <p><h4>Taste Museum</h4>
+        Virtual Reality space designed to communicate someone’s unique taste.
       </p>
     </div>
   </div>
@@ -112,6 +111,15 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="https://soonhokwon.com/form-semantics"><img class="cover" src="assets/form-semantics/FS_Thumb.gif"></a>
+      <p><h4>Form and Semantics</h4>
+        Experiments in physical prototyping with analog materials.
+      </p>
+    </div>
+  </div>
+
 
 </div>
 
@@ -128,7 +136,7 @@
 <script>
   // Tab bar fade-in on load
   document.querySelector('.tab-bar').style.opacity = '0';
-  window.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const bar = document.querySelector('.tab-bar');
     bar.style.transition = 'opacity 0.2s ease-in';
     bar.style.opacity = '1';

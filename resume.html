@@ -29,7 +29,7 @@
 <script>
   // Tab bar fade-in on load
   document.querySelector('.tab-bar').style.opacity = '0';
-  window.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const bar = document.querySelector('.tab-bar');
     bar.style.transition = 'opacity 0.2s ease-in';
     bar.style.opacity = '1';
