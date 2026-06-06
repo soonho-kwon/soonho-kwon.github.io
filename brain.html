@@ -8,6 +8,46 @@
   <link rel="shortcut icon" type="image/png" href="assets/rocket.png"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="css/main.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      transition: background-color 0.8s ease, color 0.8s ease;
+    }
+    body.brain-theme {
+      background-color: #ffffff;
+      color: #111111;
+    }
+    body.brain-theme hr {
+      background-color: #111111;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Fade in to white/black on load, then reveal video
+      requestAnimationFrame(function () {
+        document.body.classList.add('brain-theme');
+        setTimeout(function () {
+          var splash = document.getElementById('brain-splash');
+          if (splash) splash.style.opacity = '1';
+          var video = document.getElementById('brain-video');
+          if (video) video.style.opacity = '1';
+        }, 800);
+      });
+
+      // Fade back out before navigating away
+      document.querySelectorAll('a[href]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var href = link.getAttribute('href');
+          // Only intercept same-site navigation (not anchors, mailto, etc.)
+          if (!href || href.startsWith('#') || href.startsWith('mailto:')) return;
+          e.preventDefault();
+          document.body.classList.remove('brain-theme');
+          setTimeout(function () {
+            window.location.href = href;
+          }, 850);
+        });
+      });
+    });
+  </script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -27,7 +67,7 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <img class="photo" src="assets/brain/brain_splash.jpg"/>
+      <img id="brain-splash" class="photo" style="opacity:0; transition: opacity 0.6s ease;" src="assets/brain/brain_splash.jpg"/>
     </div>
   </div>
 
@@ -47,11 +87,11 @@
 
   <div class="row">
     <div class="col-sm-3">
-      <p class="caption">Our cute team in Hawaii!
-      </p>
     </div>
     <div class="col-sm-9">
-      <img class="photo" src="assets/brain/brain-team.jpg">
+      <video id="brain-video" class="photo" style="width:60%; opacity:0; transition: opacity 0.6s ease;" autoplay loop muted playsinline>
+        <source src="assets/brain/brain-overview.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 
