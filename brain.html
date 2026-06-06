@@ -19,6 +19,41 @@
     body.brain-theme hr {
       background-color: #111111;
     }
+    .tab-bar {
+      transition: background 0.8s ease, border-color 0.8s ease;
+    }
+    .tab {
+      transition: color 0.8s ease, background 0.8s ease !important;
+    }
+    .footer {
+      transition: background-color 0.8s ease;
+    }
+    .footer a {
+      transition: color 0.8s ease;
+    }
+    body.brain-theme .tab-bar {
+      background: rgba(220, 220, 220, 0.75);
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+    body.brain-theme .tab {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    body.brain-theme .tab:hover {
+      color: rgba(0, 0, 0, 0.9);
+    }
+    body.brain-theme .tab.active {
+      color: rgba(0, 0, 0, 1);
+      background: rgba(0, 0, 0, 0.08);
+    }
+    body.brain-theme .footer {
+      background-color: #ffffff;
+    }
+    body.brain-theme .footer a {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    body.brain-theme .footer a:hover {
+      color: rgba(0, 0, 0, 1);
+    }
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -79,7 +114,13 @@
     </div>
     <div class="col-sm-9">
       <p>I was a prototyper at <a class="link" href="https://brain.ai" target=_blank>Brain Technologies</a>, working on interaction architecture
-        and designing humane interfaces for new types of computer experiences. For more
+        and designing humane interfaces for new types of computer experiences. Some of my projects included:</p>
+      <ul>
+        <li>Natural language-based generative UI — interfaces that composed themselves in response to what users said</li>
+        <li>Ways for users to understand and steer model behavior</li>
+        <li>NLP feedback loops that helped the system learn from user intent over time</li>
+      </ul>
+      <p>All of this predated the era of large language models. For more
         information, please <a class="link" href="mailto:soonhokwn@gmail.com">contact me directly</a>.
       </p>
     </div>
