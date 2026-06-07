@@ -75,10 +75,19 @@
           // Only intercept same-site navigation (not anchors, mailto, etc.)
           if (!href || href.startsWith('#') || href.startsWith('mailto:')) return;
           e.preventDefault();
-          document.body.classList.remove('brain-theme');
+          // Step 1: fade out cover and video first
+          var splash = document.getElementById('brain-splash');
+          var video = document.getElementById('brain-video');
+          if (splash) splash.style.opacity = '0';
+          if (video) video.style.opacity = '0';
+          // Step 2: after their fade (0.6s), fade out the rest
           setTimeout(function () {
-            window.location.href = href;
-          }, 850);
+            document.body.classList.remove('brain-theme');
+            // Step 3: after background transition (0.8s), navigate
+            setTimeout(function () {
+              window.location.href = href;
+            }, 850);
+          }, 650);
         });
       });
     });
