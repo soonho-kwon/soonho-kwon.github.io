@@ -9,89 +9,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <style>
-    body {
-      transition: background-color 0.8s ease, color 0.8s ease;
-    }
-    body.brain-theme {
-      background-color: #ffffff;
-      color: #111111;
-    }
-    body.brain-theme hr {
-      background-color: #111111;
-    }
-    .tab-bar {
-      transition: background 0.8s ease, border-color 0.8s ease;
-    }
-    .tab {
-      transition: color 0.8s ease, background 0.8s ease !important;
-    }
-    .footer {
-      transition: background-color 0.8s ease;
-    }
-    .footer a {
-      transition: color 0.8s ease;
-    }
-    body.brain-theme .tab-bar {
-      background: rgba(220, 220, 220, 0.75);
-      border-color: rgba(0, 0, 0, 0.08);
-    }
-    body.brain-theme .tab {
-      color: rgba(0, 0, 0, 0.5);
-    }
-    body.brain-theme .tab:hover {
-      color: rgba(0, 0, 0, 0.9);
-    }
-    body.brain-theme .tab.active {
-      color: rgba(0, 0, 0, 1);
-      background: rgba(0, 0, 0, 0.08);
-    }
-    body.brain-theme .footer {
-      background-color: #ffffff;
-    }
-    body.brain-theme .footer a {
-      color: rgba(0, 0, 0, 0.5);
-    }
-    body.brain-theme .footer a:hover {
-      color: rgba(0, 0, 0, 1);
-    }
+    body { background-color: #ffffff; color: #111111; }
+    hr { background-color: #111111; }
+    .tab-bar { background: rgba(220, 220, 220, 0.75); border-color: rgba(0, 0, 0, 0.08); }
+    .tab { color: rgba(0, 0, 0, 0.5); }
+    .tab:hover { color: rgba(0, 0, 0, 0.9); }
+    .tab.active { color: rgba(0, 0, 0, 1); background: rgba(0, 0, 0, 0.08); }
+    .footer { background-color: #ffffff; }
+    .footer a { color: rgba(0, 0, 0, 0.5); }
+    .footer a:hover { color: rgba(0, 0, 0, 1); }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Fade in to white/black on load, then reveal video
-      requestAnimationFrame(function () {
-        document.body.classList.add('brain-theme');
-        setTimeout(function () {
-          var splash = document.getElementById('brain-splash');
-          if (splash) splash.style.opacity = '1';
-          var video = document.getElementById('brain-video');
-          if (video) video.style.opacity = '1';
-        }, 800);
-      });
-
-      // Fade back out before navigating away
-      document.querySelectorAll('a[href]').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-          var href = link.getAttribute('href');
-          // Only intercept same-site navigation (not anchors, mailto, etc.)
-          if (!href || href.startsWith('#') || href.startsWith('mailto:')) return;
-          e.preventDefault();
-          // Step 1: fade out cover and video first
-          var splash = document.getElementById('brain-splash');
-          var video = document.getElementById('brain-video');
-          if (splash) splash.style.opacity = '0';
-          if (video) video.style.opacity = '0';
-          // Step 2: after their fade (0.6s), fade out the rest
-          setTimeout(function () {
-            document.body.classList.remove('brain-theme');
-            // Step 3: after background transition (0.8s), navigate
-            setTimeout(function () {
-              window.location.href = href;
-            }, 850);
-          }, 650);
-        });
-      });
-    });
-  </script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -111,7 +38,7 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <img id="brain-splash" class="photo" style="opacity:0; transition: opacity 0.6s ease;" src="assets/brain/brain_splash.jpg"/>
+      <img class="photo" src="assets/brain/brain_splash.jpg"/>
     </div>
   </div>
 
@@ -139,7 +66,7 @@
     <div class="col-sm-3">
     </div>
     <div class="col-sm-9">
-      <video id="brain-video" class="photo" style="width:60%; opacity:0; transition: opacity 0.6s ease;" autoplay loop muted playsinline>
+      <video class="photo" style="width:60%;" autoplay loop muted playsinline>
         <source src="assets/brain/brain-overview.mp4" type="video/mp4">
       </video>
     </div>
@@ -166,8 +93,6 @@
     bar.style.opacity = '1';
   });
 </script>
-
-
 
 </body>
 
