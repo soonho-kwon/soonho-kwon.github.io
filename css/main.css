@@ -67,6 +67,16 @@ hr {
   padding-right: 5%;
 }
 
+/* On wide screens, use fixed side padding so the content column stays
+   1010px (1140px max-width - 2 x 65px) regardless of window width.
+   Percentage padding made it shrink as the window grew. */
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+}
+
 .footer a {
   color: rgba(255, 255, 255, 0.7);
 }
